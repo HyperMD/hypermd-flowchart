@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>hypermd-flowchart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html,
+    body,
+    .CodeMirror {
+      position: absolute !important;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="input-box" cols="30" rows="10"># hypermd-flowchart
+
+[GitHub](https://github.com/HyperMD/hypermd-flowchart) | [![NPM version](https://img.shields.io/npm/v/hypermd-flowchart.svg?style=flat-square)](https://npmjs.org/package/hypermd-flowchart)
+
+```flow
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+para=>parallel: parallel tasks
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->para
+para(path1, bottom)->sub1(right)->op1
+para(path2, top)->op1
+```
+</textarea>
+
+  <script src="https://cdn.jsdelivr.net/npm/requirejs/require.js"></script> <!-- 👈 RequireJS -->
+  <script src="https://cdn.jsdelivr.net/npm/hypermd/goods/patch-requirejs.js"></script> <!-- 👈 IMPORTANT -->
+  <script data-main src="./requirejs-main.js"></script>
+</body>
+
+</html>

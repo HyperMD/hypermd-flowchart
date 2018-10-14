@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "path": {
+    "./index": "HyperMD_PowerPack.flowchart"
+  },
+  "external": {
+    "hypermd": "HyperMD",
+    "codemirror": "CodeMirror"
+  },
+  "import": {
+    "hypermd": "./node_modules/hypermd/pbe.manifest.json"
+  }
+}
